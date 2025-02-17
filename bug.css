@@ -1,0 +1,14 @@
+The following CSS code causes an unexpected layout issue in some browsers:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 50%; /* Issue occurs here */
+}
+```
+
+The issue is that if the total width of `.item` elements exceeds the width of the `.container`, the `space-between` property doesn't work as expected and the elements might overlap or not be spaced correctly.
