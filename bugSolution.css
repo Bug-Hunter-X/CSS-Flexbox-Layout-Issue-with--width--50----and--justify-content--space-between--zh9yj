@@ -1,0 +1,15 @@
+The issue can be solved by using `flex-shrink: 1;` on the `.item` elements to allow them to shrink if necessary to fit within the container:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 50%;
+  flex-shrink: 1; /* Solution */
+}
+```
+
+Alternatively, you could use `flex-basis` for more precise width control, or remove the `width` property and let the flex items distribute space naturally with `justify-content: space-between`.
